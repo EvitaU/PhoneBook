@@ -1,3 +1,4 @@
+import java.io.File;
 import java.util.*;
 
 public class Options {
@@ -11,6 +12,7 @@ public class Options {
     }
 
     void addContact() {
+
         System.out.println("Add new contact to phonebook: ");
 
         Contact contact = new Contact();
@@ -27,6 +29,8 @@ public class Options {
 
         String message = addContact(contact);
         System.out.println(message);
+        File file = new File("contacts.txt");
+
     }
 
     public ArrayList<Contact> getAllContacts() {
