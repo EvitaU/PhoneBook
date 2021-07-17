@@ -18,7 +18,7 @@ public class Options {
         contact.name = scanner.next();
 
         System.out.println("Enter phone number: ");
-        contact.number = scanner.nextInt();
+        contact.number = scanner.next();
 
         System.out.println("Enter email: ");
         contact.email = scanner.next();
@@ -71,7 +71,7 @@ public class Options {
         System.out.println(message);
     }
 
-    public String updateContact(int contactIndex, Contact newContact) {
+   public String updateContact(int contactIndex, Contact newContact) {
         if (this.contacts.get(contactIndex) != null) {
             Contact oldContact = this.contacts.get(contactIndex);
             oldContact.name = newContact.name;
@@ -94,7 +94,7 @@ public class Options {
         contact.name = scanner.next();
 
         System.out.println("Enter number: ");
-        contact.number = scanner.nextInt();
+        contact.number = scanner.next();
 
         System.out.println("Enter email: ");
         contact.email = scanner.next();
@@ -108,6 +108,7 @@ public class Options {
     }
 
     void searchContact() {
+        this.getAllContacts();
         System.out.println("Find contact \n");
         System.out.println("What are you looking for? ");
         int number = 0;
